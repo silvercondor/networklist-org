@@ -210,8 +210,8 @@ export const getStaticProps = async () => {
     const chainsResponse = await fetch('https://chainid.network/chains.json')
     const fullChainsJson = await chainsResponse.json()
     const chainsJson = fullChainsJson.filter(c => {
-      if (c.infoUrl === "https://forum.poa.network/c/xdai-chain") {
-        c.infoUrl = "https://www.blockscout.com/xdai/mainnet/"
+      if (c.infoURL === "https://forum.poa.network/c/xdai-chain") {
+        c.infoURL = "https://www.blockscout.com/xdai/mainnet/"
       }
       return whitelistedChains.indexOf(c.nativeCurrency.symbol.toUpperCase()) > -1 && c.network === 'mainnet'
     })
