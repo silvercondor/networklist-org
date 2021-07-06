@@ -7,6 +7,7 @@ const whitelistedChains = [
     "AVAX",
     "XDAI",
     "ONE",
-    "KLAY"
+    "KLAY",
+    "KCS"
 ]
 export default whitelistedChains
