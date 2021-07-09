@@ -213,6 +213,9 @@ export const getStaticProps = async () => {
       if (c.infoURL === "https://forum.poa.network/c/xdai-chain") {
         c.infoURL = "https://www.blockscout.com/xdai/mainnet/"
       }
+      if (c.nativeCurrency.symbol.toUpperCase() === "MATIC") {
+        c.infoURL = "https://www.polygonscan.com/"
+      }
       return whitelistedChains.indexOf(c.nativeCurrency.symbol.toUpperCase()) > -1 && c.network === 'mainnet'
     })
     return {
