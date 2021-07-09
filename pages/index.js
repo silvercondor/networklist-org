@@ -216,6 +216,9 @@ export const getStaticProps = async () => {
       if (c.nativeCurrency.symbol.toUpperCase() === "MATIC") {
         c.infoURL = "https://www.polygonscan.com/"
       }
+      if (c.nativeCurrency.symbol.toUpperCase() === "KCS"){
+        c.infoURL = "https://explorer.kcc.io/"
+      }
       return whitelistedChains.indexOf(c.nativeCurrency.symbol.toUpperCase()) > -1 && c.network === 'mainnet'
     })
     return {
