@@ -1,5 +1,6 @@
 const whitelistedChains = [
     "ETH",
+    "AETH",
     "BNB",
     "HT",
     "FTM",
